@@ -6,8 +6,8 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import Navbar from './Features/Nav'
 import MainMenuContainer from './Pages/MainPage/container/maincontainer';
 import Login from './Pages/Login/index'
-// import ChillerPlant from './Pages/ChillerPlant/index'
-import Sidebar from './Features/sidebar/component/sidebar.js';
+import ChillerPlant from './Pages/ChillerPlant/index'
+import Sidebar from './Features/Sidebar';
 
 
 const App = () => {
@@ -38,7 +38,7 @@ const PageApp = (props) => {
             <div>
               <Navbar /> 
               <Route path="/main" component={MainMenuContainer} />
-              {/* <Route path="/chiller-plant" component={ChillerPlant} /> */}
+              <Route path="/chiller-plant" component={ChillerPlant} />
            </div>
           
         </Switch>
