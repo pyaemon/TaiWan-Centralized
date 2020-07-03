@@ -1,9 +1,11 @@
-import React from 'react';
-const ChillerPlant=()=>{
-    return(
-        <div>
-            <h2>ChillerPlant</h2>
-        </div>
-    )
-}
-export default ChillerPlant;
+// import React from 'react';
+// import StatusList from './List';
+
+// const ChillerPlant=()=>{
+//     return(
+//        <div className=''>
+//            <StatusList/>
+//        </div>
+//     )
+// }
+// export default ChillerPlant;
