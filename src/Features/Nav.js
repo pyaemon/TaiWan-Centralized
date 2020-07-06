@@ -17,7 +17,7 @@ const Navbar = () => {
                         alt="logo">
                     </img>
                 </a>
-                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -33,9 +33,9 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="form-inline ml-auto ml-sm-5">
-                        <div className="pl-4"><img src={info_icon} style={{ height: "40px", width: "45px" }} className="shadow rounded p-2" /></div>
-                        <div className="pl-4"> <img src={american_flag} style={{ height: "40px", width: "45px" }} className="shadow rounded p-2" /></div>
-                        <div className="pl-4"><img src={acbel_user_icon_exemple} style={{ height: "40px", width: "45px" }} className="shadow rounded" /></div>
+                        <div className="px-1"><img src={info_icon} style={{ height: "40px", width: "45px" }} className="shadow rounded p-2" /></div>
+                        <div className="px-1"> <img src={american_flag} style={{ height: "40px", width: "45px" }} className="shadow rounded p-2" /></div>
+                        <div className="px-1"><img src={acbel_user_icon_exemple} style={{ height: "40px", width: "45px" }} className="shadow rounded" /></div>
                     </div>
                 </div>
 

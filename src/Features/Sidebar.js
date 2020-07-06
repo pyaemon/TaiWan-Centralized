@@ -32,7 +32,7 @@ const Sidebar = (props) => {
       {
         pathname === '/main' ?
         <nav  style={{minWidth: 60, maxWidth: 60,backgroundColor: '#32a3de'}}>
-          <div class="py-3 row justify-content-center">
+          <div className="row justify-content-center mt-3 py-3" >
             <img src={Icon} alt="icon" style={{ height: '50px', width: '50px' }} />
 
           </div>
