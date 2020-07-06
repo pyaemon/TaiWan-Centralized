@@ -40,6 +40,5 @@ const list = [
     { name: "S01A01-B101", n1: '20', n2: '23', switch: 'ON' },
     { name: "S01A01-B101", n1: '20', n2: '23', switch: 'OFF' },
 ]
-console.log("list", list);
 
 

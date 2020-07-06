@@ -7,6 +7,7 @@ import new_iotcomui_ui_icon from '../Config/images/new iotcomui ui_icon.png';
 import environmental_monitor_ui_icon from '../Config/images/environmental monitor ui_icon.png';
 import Chiller_Plant_Icon from '../Config/images/chiller plant ui_icon.png';
 import Toggle from '../tools/toggle.js';
+import { withRouter } from 'react-router-dom';
 
 const Sidebar = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -26,7 +27,6 @@ const Sidebar = (props) => {
     sidebar = subsidebar();
   }
 
-  
   return (
     <Fragment>
       {
@@ -125,11 +125,14 @@ const Sidebar = (props) => {
   }
 
   function menusidebar() {
+    const IconClick =()=>{
+      props.history.push('/main')
+    }
     return (
       <nav className="position-fixed" style={{zIndex: 2000, left: 250, minWidth: 80, maxWidth: 80, height: '100%', marginLeft:  -250, overflowY: 'auto',backgroundColor: '#32a3de'}}>
         <div className="p-4 pt-1">
           <div className="row justify-content-center mt-3 py-3" >
-            <img src={Icon} alt="icon" style={{ height: '50px', width: '50px' }} onClick={ console.log(props)}/>
+            <img src={Icon} alt="icon" style={{ height: '50px', width: '50px', cursor:'pointer' }} onClick={IconClick}/>
           </div>
         </div>
         {/* <div class="d-flex justify-content-center"><Toggle click={openHandler}></Toggle></div>  */}
@@ -163,5 +166,5 @@ const Sidebar = (props) => {
 
 
 
-export default Sidebar;
+export default withRouter(Sidebar);
 

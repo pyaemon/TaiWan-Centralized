@@ -6,7 +6,7 @@ const MainMenuCard = (props) => {
     const { title, icon, loading, Consumption, Error, loadingValue, ConsumptionValue, ErrorValue,click} = props
     return (
         <div className="flex-column" onClick={click}>
-            <div className="card shadow-sm rounded-lg m-3" style={{ minWidth: '300px', minHeight: '350px', maxWidth: '350px', maxHeight: '220px', }} >
+            <div className="card shadow-sm rounded-lg m-3" style={{ minWidth: '300px', minHeight: '350px', maxWidth: '350px', maxHeight: '220px', cursor:'pointer' }} >
                     <div className="p-3">
                         <img src={icon} style={{ width: '48px', height: '43px' }} alt="icon" />
                     </div>
