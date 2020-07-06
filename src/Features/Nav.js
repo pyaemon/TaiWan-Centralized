@@ -29,7 +29,7 @@ const Navbar = () => {
                             <a className="nav-link text-muted font-weight-bold " href="#" style={{ marginLeft: 40 }}>Management</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-muted font-weight-bold" href="#" style={{ marginLeft: 40 }}>Alarams<span className="ml-2 badge badge-danger">3</span></a>
+                            <a className="nav-link text-muted font-weight-bold" href="#" style={{ marginLeft: 40 }}>Alarms<span className="ml-2 badge badge-danger">3</span></a>
                         </li>
                     </ul>
                     <div className="form-inline " style={{marginLeft: 40}}>
