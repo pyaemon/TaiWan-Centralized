@@ -6,57 +6,45 @@ import american_flag from '../Config/images/language_icon.png';
 
 const Navbar = () => {
     const pathname = window.location.pathname
-   
+
     return (
-        <div>
-            <nav className="navbar sticky-top navbar-expand-md navbar-white bg-white">
-                <div className="container-fluid">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
 
-                    <a className="navbar-brand justify-content-left pl-2" href="#">
-                        <img src={Evercomm}
-                            style={{ height: "30px", cursor: "pointer" }}
-                            alt="logo">
-                        </img>
-                    </a>
-                    <button className="navbar-toggler btn btn-mute" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i className="fa fa-bars"></i>
-                    </button>
-
-                    <div className="col-8">
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav w-100 justify-content-center mx-auto" >
-                                <li className="nav-item active">
-                                    <a className="nav-link text-primary border-bottom border-primary font-weight-bold" href="#">My Apps <span className="sr-only">(current)</span></a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark font-weight-bold" href="#">Management</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link text-dark font-weight-bold" href="#">Alarams<span className="ml-2 badge badge-danger">3</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul className="navbar-nav w-100 justify-content-end pr-5 icon" >
-                            <li className="nav-item active ml-2 p-1">
-                                <img src={info_icon} style={{ height: "30px", width: "35px" }} />
-                            </li>
-                            <li className="nav-item bg-white  ml-2 p-1">
-                                <img src={american_flag} style={{ height: "25px", width: "30px" }} />
-                            </li>
-                            <li className="nav-item ml-2 p-1">
-                                <img src={acbel_user_icon_exemple} style={{ height: "30px", width: "35px" }} className="" />
-                            </li>
-                        </ul>
+                <a className="navbar-brand justify-content-left" href="#">
+                    <img src={Evercomm}
+                        style={{ height: "30px", cursor: "pointer" }}
+                        alt="logo">
+                    </img>
+                </a>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav justify-content-center mx-auto" style={{ fontSize: 17 }} >
+                        <li className="nav-item active">
+                            <a className="nav-link font-weight-bold" href="#" style={{ color: '#32a3de', borderBottom: '3px solid #32a3de', marginLeft: 40 }}>My Apps <span className="sr-only">(current)</span></a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link text-muted font-weight-bold " href="#" style={{ marginLeft: 40 }}>Management</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link text-muted font-weight-bold" href="#" style={{ marginLeft: 40 }}>Alarams<span className="ml-2 badge badge-danger">3</span></a>
+                        </li>
+                    </ul>
+                    <div className="form-inline ml-auto ml-sm-5">
+                        <div className="pl-4"><img src={info_icon} style={{ height: "40px", width: "45px" }} className="shadow rounded p-2" /></div>
+                        <div className="pl-4"> <img src={american_flag} style={{ height: "40px", width: "45px" }} className="shadow rounded p-2" /></div>
+                        <div className="pl-4"><img src={acbel_user_icon_exemple} style={{ height: "40px", width: "45px" }} className="shadow rounded" /></div>
                     </div>
                 </div>
+
             </nav>
         </div>
 
-
     );
+
+
 }
 
 export default Navbar;

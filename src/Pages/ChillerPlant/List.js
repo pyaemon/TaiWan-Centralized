@@ -4,7 +4,7 @@ import Font from '../../Config/Font';
 
 const StatusList = (props) => {
     return (
-        <div className="py-5 container" style={{ width: '400px' }}>
+        <div className="py-5 container float-left" style={{ width: '400px' }}>
            
             <ul className="list-group shadow bg-white">
                 <div className="p-4 font-weight-bold" style={{fontSize: Font.heading3}}>Status list</div>
