@@ -31,9 +31,9 @@ const Sidebar = (props) => {
     <Fragment>
       {
         pathname === '/main' ?
-        <nav  style={{minWidth: 80, maxWidth:  80,backgroundColor: '#32a3de'}}>
+        <nav  style={{minWidth: 60, maxWidth: 60,backgroundColor: '#32a3de'}}>
           <div class="py-3 row justify-content-center">
-            <img src={Icon} alt="icon" style={{ height: '55px', width: '60px' }} />
+            <img src={Icon} alt="icon" style={{ height: '50px', width: '50px' }} />
 
           </div>
         </nav>
@@ -42,14 +42,12 @@ const Sidebar = (props) => {
           { sidebar }
           </Fragment>
       }
-
-
     </Fragment>
   )
 
   function subsidebar() {
     return (
-      <nav id="sidebar" style={{minWidth: 300, maxWidth:  300,backgroundColor: '#32a3de', minHeight: '100vh'}} className="">
+      <nav id="sidebar" className="" style={{minWidth: 300, maxWidth: 300,backgroundColor: '#32a3de', minHeight: '100vh'}} >
         <div className="p-4 pt-1">
           <div className="row p-3 ">
             <div className="col-3">
@@ -128,10 +126,10 @@ const Sidebar = (props) => {
       props.history.push('/main')
     }
     return (
-      <nav className="" style={{minWidth: 80, maxWidth: 80,backgroundColor: '#32a3de'}}>
+      <nav className="" style={{minWidth: 60, maxWidth: 60,backgroundColor: '#32a3de'}}>
         <div className="">
           <div className="row justify-content-center mt-3 py-3" >
-            <img src={Icon} alt="icon" style={{ height: '55px', width: '60px', cursor:'pointer' }} onClick={IconClick}/>
+            <img src={Icon} alt="icon" style={{ height: '50px', width: '50px', cursor:'pointer' }} onClick={IconClick}/>
           </div>
         </div>
         {/* <div class="d-flex justify-content-center"><Toggle click={openHandler}></Toggle></div>  */}
@@ -162,8 +160,6 @@ const Sidebar = (props) => {
   }
  
 }
-
-
 
 export default withRouter(Sidebar);
 
