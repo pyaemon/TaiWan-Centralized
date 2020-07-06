@@ -12,6 +12,16 @@ import { withRouter } from 'react-router-dom';
 const Sidebar = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const SideStyle={
+    zIndex: 2000, 
+    left: 250, 
+    minWidth: 60,
+    maxWidth: 80, 
+    height: '100%',
+    marginLeft:  -250, 
+    overflowY: 'auto',
+    backgroundColor: '#32a3de'
+  }
   const pathname = window.location.pathname
   const openHandler = () => {
     if (!sidebarOpen) {
@@ -31,7 +41,7 @@ const Sidebar = (props) => {
     <Fragment>
       {
         pathname === '/main' ?
-          <div className='position-relative position-sticky float-left' style={{ minWidth: 70, maxWidth: 70, height: '100vh', zIndex: 10000, top: 0, left: 0, overflowX: 'hidden', backgroundColor: '#32a3de' }}>
+          <div className='position-fixed float-left' style={SideStyle}>
             <div className="py-3 row justify-content-center">
               <img src={Icon} alt="icon" style={{ height: '50px', width: '50px' }} />
             </div>
@@ -49,7 +59,7 @@ const Sidebar = (props) => {
   function subsidebar() {
     return (
   
-      <nav className="position-fixed" style={{zIndex: 2000, left: 250, minWidth: 300, maxWidth: 300, height: '100%', marginLeft:  -250,overflowY: 'auto',backgroundColor: '#32a3de'}}>
+      <nav className="position-fixed float-left" style={{zIndex: 2000, left: 250, minWidth: 250, maxWidth: 300, height: '100%', marginLeft:  -250,overflowY: 'auto',backgroundColor: '#32a3de'}}>
         <div className="p-3">
           {/* <div className="container-fluid border-bottom">
                   <Toggle click={openHandler}></Toggle>
@@ -129,7 +139,7 @@ const Sidebar = (props) => {
       props.history.push('/main')
     }
     return (
-      <nav className="position-fixed" style={{zIndex: 2000, left: 250, minWidth: 80, maxWidth: 80, height: '100%', marginLeft:  -250, overflowY: 'auto',backgroundColor: '#32a3de'}}>
+      <nav className="position-fixed float-left" style={SideStyle}>
         <div className="p-4 pt-1">
           <div className="row justify-content-center mt-3 py-3" >
             <img src={Icon} alt="icon" style={{ height: '50px', width: '50px', cursor:'pointer' }} onClick={IconClick}/>
@@ -138,7 +148,6 @@ const Sidebar = (props) => {
         {/* <div class="d-flex justify-content-center"><Toggle click={openHandler}></Toggle></div>  */}
         <div className="p-1 mt-5">
           {sidebarOpen ?
-
             <div className="row justify-content-center mt-5">
               <Toggle click={openHandler} sidebarOpen={sidebarOpen}></Toggle>
             </div>
@@ -163,8 +172,6 @@ const Sidebar = (props) => {
   }
  
 }
-
-
 
 export default withRouter(Sidebar);
 

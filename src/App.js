@@ -14,14 +14,12 @@ const App = () => {
   return (
     <React.Fragment>
       <BrowserRouter>
-        {/* <div className=""> */}
           <Switch>
             <Route path="/login" component={Login} exact />
             <Redirect to='/login' from='/' component={Login} exact />
             <PageApp />
 
           </Switch>
-        {/* </div> */}
       </BrowserRouter>
     </React.Fragment>
   )
@@ -39,8 +37,7 @@ const PageApp = (props) => {
               <Navbar /> 
               <Route path="/main" component={MainMenuContainer} />
               <Route path="/chiller-plant" component={ChillerPlant} />
-           </div>
-          
+           </div>  
         </Switch>
       </div>
   )
