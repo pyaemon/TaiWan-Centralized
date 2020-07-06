@@ -68,10 +68,10 @@ const Sidebar = (props) => {
                 <a href="#mapViewMenu" data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">Mapview</a>
                 <ul className="collapse list-unstyled ml-3" id="mapViewMenu">
                   <li className="pt-3">
-                    <a href="#" className="text-white text-decoration-none">Chilleroom</a>
+                    <a href="/1" className="text-white text-decoration-none">Chilleroom</a>
                   </li>
                   <li className="pt-2">
-                    <a href="#" className="text-white text-decoration-none">Cooling tower</a>
+                    <a href="/2" className="text-white text-decoration-none">Cooling tower</a>
                   </li>
                   <li className="pt-2">
                     <a href="#" className="text-white text-decoration-none">Zonepump</a>
