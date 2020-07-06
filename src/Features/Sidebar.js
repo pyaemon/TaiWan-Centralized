@@ -119,7 +119,6 @@ const Sidebar = (props) => {
               </li>
             </ul>
           </ul>
-
         </div>
       </nav>
     )
@@ -127,9 +126,9 @@ const Sidebar = (props) => {
 
   function menusidebar() {
     return (
-      <nav className="position-fixed" style={{zIndex: 2000, left: 250, minWidth: 80, maxWidth: 80, height: '100%', marginLeft:  -250,overflowY: 'auto',backgroundColor: '#32a3de'}}>
+      <nav className="position-fixed" style={{zIndex: 2000, left: 250, minWidth: 80, maxWidth: 80, height: '100%', marginLeft:  -250, overflowY: 'auto',backgroundColor: '#32a3de'}}>
         <div className="p-4 pt-1">
-          <div className="row justify-content-center" >
+          <div className="row justify-content-center mt-3 py-3" >
             <img src={Icon} alt="icon" style={{ height: '50px', width: '50px' }} onClick={ console.log(props)}/>
           </div>
         </div>
@@ -142,21 +141,20 @@ const Sidebar = (props) => {
             </div>
             :
             null
-          }
-
-          <div className="row justify-content-center mt-3">
-            <img src={solar_power_ui_icon} alt="icon" style={{ height: '50px', width: '50px' }} />
+          }  
+            <div className="row justify-content-center mt-3  py-3 ">
+              <img src={solar_power_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
+            </div>
+            <div className="row justify-content-center mt-3  py-3">
+              <img src={street_light_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
+            </div>
+            <div className="row justify-content-center mt-3  py-3">
+              <img src={new_iotcomui_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
+            </div>
+            <div className="row justify-content-center mt-3  py-3">
+              <img src={environmental_monitor_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
+            </div>
           </div>
-          <div className="row justify-content-center mt-3">
-            <img src={street_light_ui_icon} alt="icon" style={{ height: '50px', width: '50px' }} />
-          </div>
-          <div className="row justify-content-center mt-3">
-            <img src={new_iotcomui_ui_icon} alt="icon" style={{ height: '50px', width: '50px' }} />
-          </div>
-          <div className="row justify-content-center mt-3">
-            <img src={environmental_monitor_ui_icon} alt="icon" style={{ height: '50px', width: '50px' }} />
-          </div>
-        </div>
       </nav>
     )
   }
