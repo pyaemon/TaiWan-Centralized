@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Evercomm from '../../Config/images/New_Evercomm_Logo_gradient .png'
 
@@ -7,11 +7,15 @@ import InputBox from '../../Features/InputBox'
 import Font from '../../Config/Font'
 
 const Login = (props) => {
-
+    const [data, setData] = useState()
     const _handleLogin = e => {
-        props.history.push("/main")
+        if(data.email === "admin@gmail.com" || data.password === "admin"){
+            props.history.push("/main")
+        }
+       else alert("Email or password does not match.")
     }
 
+    const onChange = data => setData(data)
     return (
         <div className="container-fluid justify-content-center align-items-center " style={{height: window.innerHeight, display:'flex', }} >
             <div className="mx-auto col-sm-12 col-md-10 col-lg-6 col-xl-4 py-5 px-5 bg-white shadow rounded"
@@ -25,7 +29,7 @@ const Login = (props) => {
                         <InputBox
                             type="email"
                             required
-                            //onChange={(e) => this.onChange({ email: e.target.value })}
+                            onChange={(e) => onChange({ email: e.target.value })}
                             placeholder="username"
                         //value={this.state.email}
                         />
@@ -33,9 +37,8 @@ const Login = (props) => {
                     <div className="form-group my-0">
                         <InputBox
                             required
-                            //type={showPassword ? "text" : "password"}
                             type="password"
-                            //onChange={(e) => this.onChange({ password: e.target.value })}
+                            onChange={(e) => onChange({ password: e.target.value })}
                             placeholder="password"
                         //value={this.state.password}
                         />
