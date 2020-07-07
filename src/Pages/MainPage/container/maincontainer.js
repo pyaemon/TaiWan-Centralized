@@ -13,7 +13,7 @@ const MainMenuContainer = (props) => {
     return (
         <div className="py-5 container-fluid">
             <div className="d-flex flex-row flex-wrap  justify-content-center">
-                <MainMenuCard title={"Acbel Chiller Plant UI"}
+                <MainMenuCard title={"Acbel chiller plant UI"}
                     icon={Icon1} loading={"Loading%"} Consumption={"Consumption"} Error={"Error"}
                     loadingValue={"50%"} ConsumptionValue={"150.3Kw"} ErrorValue={"7"} click={_handleIcon} />
 
@@ -21,7 +21,7 @@ const MainMenuContainer = (props) => {
                     icon={Icon2} loading={"Loading%"} Consumption={"Consumption"} Error={"Error"}
                     loadingValue={"50%"} ConsumptionValue={"150.3Kw"} ErrorValue={"7"}
                 />
-                <MainMenuCard title={"Ndhu Street light UI"}
+                <MainMenuCard title={"Ndhu street light UI"}
                     icon={Icon3} loading={"Streetlight"} Consumption={"On"} Error={"Error"}
                     loadingValue={"1024"} ConsumptionValue={"90"} ErrorValue={"5"}
                 />

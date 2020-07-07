@@ -33,7 +33,7 @@ const PageApp = (props) => {
     <div className="wrapper d-flex align-items-stretch">
       <Sidebar />
       <Switch>
-        <div className="ml-lg-4 ml-sm-0 mt-4" style={{ width: '100%', padding: 0, minHeight: '100vh' }}>
+        <div className="m-lg-4 m-sm-0 " style={{ width: '100%', padding: 0, minHeight: '100vh' }}>
           <Navbar />
           <Route path="/main" component={MainMenuContainer} className="mx-2 mt-4" />
           <Route path="/chiller-plant" component={ChillerPlant} className="mx-2 mt-4" />
