@@ -29,13 +29,13 @@ const Navbar = () => {
                             <a className="nav-link text-muted font-weight-bold " href="#" style={{ marginLeft: 40 }}>Management</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-muted font-weight-bold" href="#" style={{ marginLeft: 40 }}>Alarams<span className="ml-2 badge badge-danger">3</span></a>
+                            <a className="nav-link text-muted font-weight-bold" href="#" style={{ marginLeft: 40 }}>Alarms<span className="ml-2 badge badge-danger">3</span></a>
                         </li>
                     </ul>
-                    <div className="form-inline ml-auto ml-sm-5">
-                        <div className="px-1"><img src={info_icon} style={{ height: "40px", width: "45px" }} className="shadow rounded p-2" /></div>
-                        <div className="px-1"> <img src={american_flag} style={{ height: "40px", width: "45px" }} className="shadow rounded p-2" /></div>
-                        <div className="px-1"><img src={acbel_user_icon_exemple} style={{ height: "40px", width: "45px" }} className="shadow rounded" /></div>
+                    <div className="form-inline " style={{marginLeft: 40}}>
+                        <div className="pr-1"><img src={info_icon} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
+                        <div className="px-1"> <img src={american_flag} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
+                        <div className="px-1"><img src={acbel_user_icon_exemple} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded" /></div>
                     </div>
                 </div>
 

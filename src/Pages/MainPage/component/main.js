@@ -8,7 +8,7 @@ const MainMenuCard = (props) => {
         <div className="flex-column" onClick={click}>
             <div className="card shadow rounded-lg m-3 border-0" style={{ minWidth: '300px', minHeight: '350px', maxWidth: '350px', maxHeight: '220px', cursor:'pointer' }} >
                     <div className="p-3">
-                        <img src={icon} style={{ width: '48px', height: '43px' }} alt="icon" />
+                        <img src={icon} style={{ width: '50px', height: '50px' }} alt="icon" />
                     </div>
                     <div className="card-body">
                         <div className="card-title font-weight-bold" style={{ fontSize: Font.heading3 }}>{title}</div>
