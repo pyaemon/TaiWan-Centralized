@@ -77,13 +77,24 @@ const Sidebar = (props) => {
                     <a href="#" className="text-white text-decoration-none">Zonepump</a>
                   </li>
                   <li className="pt-2">
-                    <a href="#" className="text-white text-decoration-none">Chilleroom</a>
-                  </li>
-                  <li className="pt-2">
-                    <a href="#" className="text-white text-decoration-none">Cooling tower</a>
-                  </li>
-                  <li className="pt-2">
-                    <a href="#" className="text-white text-decoration-none">Zonepump</a>
+                  <a href="#floor"  data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">Floor</a>
+                  <ul className="collapse list-unstyled ml-3" id="floor">
+                    <li className="pt-2">
+                      <a href="1stFloor" className="text-white text-decoration-none"> 1st Floor</a>
+                    </li>
+                    <li className="pt-2">
+                      <a href="#" className="text-white text-decoration-none">1st Floor SMT</a>
+                    </li>
+                    <li className="pt-2">
+                      <a href="#" className="text-white text-decoration-none">2st Floor</a>
+                    </li>
+                    <li className="pt-2">
+                      <a href="#" className="text-white text-decoration-none">3st Floor</a>
+                    </li>
+                    <li className="pt-2">
+                      <a href="#" className="text-white text-decoration-none">3st Floor</a>
+                    </li>
+                  </ul>
                   </li>
                 </ul>
               </li>
