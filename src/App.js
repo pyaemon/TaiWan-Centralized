@@ -37,6 +37,11 @@ const PageApp = (props) => {
           <Navbar />
           <Route path="/main" component={MainMenuContainer} className="mx-2 mt-4" />
           <Route path="/chiller-plant" component={ChillerPlant} className="mx-2 mt-4" />
+          <Route path="/chillerRoom" component={ChillerPlant} className="mx-2 mt-4" />
+          <Route path="/coolingTower" component={ChillerPlant} className="mx-2 mt-4" />
+          <Route path="/zonePump" component={ChillerPlant} className="mx-2 mt-4" />
+          <Route path="/1stFloor" component={ChillerPlant} className="mx-2 mt-4" />
+          <Route path="/1stFloor-SMT" component={ChillerPlant} className="mx-2 mt-4" />
         </div>
       </Switch>
     </div>
