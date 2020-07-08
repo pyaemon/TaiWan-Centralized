@@ -1,4 +1,4 @@
-import React, { Fragment, useState, Component } from 'react';
+import React, { Fragment, useState, Component, useContext } from 'react';
 import '.././App.css';
 import Icon from '../Config/images/i4.PNG';
 import solar_power_ui_icon from '../Config/images/solar power ui_icon.png';
@@ -8,10 +8,12 @@ import environmental_monitor_ui_icon from '../Config/images/environmental monito
 import Chiller_Plant_Icon from '../Config/images/chiller plant ui_icon.png';
 import Toggle from '../tools/toggle.js';
 import { withRouter } from 'react-router-dom';
+import { LanguageContext } from '../context/LanguageContext';
+import { SidebarLanguage } from '../util/language';
 
 const Sidebar = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const {languageId} = useContext(LanguageContext)
   const pathname = window.location.pathname
   const openHandler = () => {
     if (!sidebarOpen) {
@@ -77,22 +79,22 @@ const Sidebar = (props) => {
                     <a href="/zonePump" className="text-white text-decoration-none">Zonepump</a>
                   </li>
                   <li className="pt-2">
-                  <a href="#floor"  data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">Floor</a>
+                  <a href="#floor"  data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">{SidebarLanguage[languageId].MV_Item}</a>
                   <ul className="collapse list-unstyled ml-3" id="floor">
                     <li className="pt-2">
-                      <a href="/1stFloor" className="text-white text-decoration-none"> 1st Floor</a>
+                      <a href="/1stFloor" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item1}</a>
                     </li>
                     <li className="pt-2">
-                      <a href="/1stFloor-SMT" className="text-white text-decoration-none">1st Floor SMT</a>
+                      <a href="/1stFloor-SMT" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item2}</a>
                     </li>
                     <li className="pt-2">
-                      <a href="#" className="text-white text-decoration-none">2st Floor</a>
+                      <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item3}</a>
                     </li>
                     <li className="pt-2">
-                      <a href="#" className="text-white text-decoration-none">3st Floor</a>
+                      <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item4}</a>
                     </li>
                     <li className="pt-2">
-                      <a href="#" className="text-white text-decoration-none">3st Floor</a>
+                      <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item5}</a>
                     </li>
                   </ul>
                   </li>
