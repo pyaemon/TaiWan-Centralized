@@ -5,10 +5,9 @@ import Font from '../../Config/Font';
 const StatusList = (props) => {
     return (
         <div className="w-100 ">
-           
             <ul className="list-group shadow bg-white p-2">
                 <div className="p-4 font-weight-bold" style={{fontSize: Font.heading3}}>Status list</div>
-                <div className="mb-5 p-2 mx-2 shadow-sm">
+                <div className="mb-5 p-2 mx-2 shadow-sm ">
                     <input type="text" placeholder="送 風 機" style={{border: 'none'}} />
                 </div>
             

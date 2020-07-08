@@ -20,7 +20,7 @@ const Navbar = () => {
                     {
                         pathname == "/main" ? <img src={Evercomm}
                             style={{ height: "30px", cursor: "pointer"}}
-                            alt="logo" /> :<div style={{color: 'grey'}}><i className="fa fa-circle pr-4" style={{width: '1px'}}></i> {`${path} ${pathname}`}</div>
+                            alt="logo"/> :<div style={{color: 'grey'}}><i className="fa fa-circle pr-4" style={{width: '1px'}}></i> {`${path} ${pathname}`}</div>
                     }
                 </a>
                 <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@ const Navbar = () => {
                     </ul>
                     <div className="form-inline " style={{ marginLeft: 40 }}>
                         <div className="pr-1"><img src={info_icon} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
-                        <div class="px-1" type="button" data-toggle="dropdown"> { languageId == 0?<img src={american_flag}style={flagStyle} className="shadow-sm rounded p-2" />: <img src={taiwanFlag}style={flagStyle} className="shadow-sm rounded p-2" />} </div>
+                        <div class="px-1" type="button" data-toggle="dropdown"> { languageId == 0?<img src={american_flag} style={flagStyle} className="shadow-sm rounded p-2" />: <img src={taiwanFlag} style={flagStyle} className="shadow-sm rounded p-2" />} </div>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" onClick={() => {
                                 setlanguageId(0)
