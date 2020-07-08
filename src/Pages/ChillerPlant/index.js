@@ -10,7 +10,6 @@ import FirstFloorSMT from './Mapview/Floor/1stFloorSMT';
 
 const ChillerPlant=()=>{
     // const path=window.location.pathname
-    
     return(
        <div className='py-5'>
            <Switch>

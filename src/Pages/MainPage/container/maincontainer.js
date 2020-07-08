@@ -8,7 +8,7 @@ import MainMenuCard from '../component/main'
 
 const MainMenuContainer = (props) => {
     const _handleIcon = e => {
-        props.history.push("/chiller-plant")
+        props.history.push("/chillerRoom")
     }
     return (
         <div className="py-5 container-fluid">

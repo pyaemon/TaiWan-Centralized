@@ -16,8 +16,6 @@ const FirstFloor = () => {
                 </div>
             </div>
         </div>
-
-
     )
 }
 

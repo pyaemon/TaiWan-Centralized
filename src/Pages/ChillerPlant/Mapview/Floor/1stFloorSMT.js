@@ -16,7 +16,6 @@ const FirstFloorSMT = () => {
             </div>
         </div>
     </div>
-
     )
 }
 
