@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import LanguageContextProvider from './context/LanguageContext';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <LanguageContextProvider>
+    <BrowserRouter>
+      <App />
+      </BrowserRouter>
+  </LanguageContextProvider>,
   document.getElementById('root')
 );
 
