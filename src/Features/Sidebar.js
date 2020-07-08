@@ -49,13 +49,13 @@ const Sidebar = (props) => {
 
   function subsidebar() {
     return (
-      <nav className="" style={{backgroundColor: '#32a3de'}}>
+      <nav id="sidebar" className="" style={{minWidth: 300, maxWidth: 300,backgroundColor: '#32a3de', minHeight: '100vh'}} >
         <div className="p-4 pt-1">
           <div className="row p-3 ">
             <div className="col-3">
               <a href="#" className="img logo rounded-circle mb-5"> <img src={Chiller_Plant_Icon} style={{ width: 50, height: 50 }} /> </a>
             </div>
-            <div className="col-6 mt-2 pt-1"><span className="font-weight-bolder text-dark px-3" style={{ fontSize: 13, whiteSpace:'nowrap'}}>Acbel Chillerplant UI</span></div>
+            <div className="col-6 pt-1"><span className="font-weight-bolder text-dark" style={{ fontSize: 13}}>Acbel Chillerplant UI</span></div>
           </div>
           <div className="d-flex justify-content-end"><Toggle click={openHandler}>asd</Toggle></div>
           <ul className="list-unstyled mb-5 mt-3 p-2">
