@@ -4,11 +4,13 @@ import acbel_user_icon_exemple from '../Config/images/acbel user icon exemple.pn
 import info_icon from '../Config/images/info_icon.png';
 import american_flag from '../Config/images/language_icon.png';
 import { LanguageContext } from '../context/LanguageContext';
+import taiwanFlag from '../Config/images/TaiwanFlag.jpg'
 
 const Navbar = () => {
     const pathname = window.location.pathname;
     const path = "Mapview"
     const {languageId,setlanguageId}=useContext(LanguageContext)
+    const flagStyle={height: "40px", width: "40px" }
 
     return (
         <div class="container-fluid">
@@ -38,7 +40,7 @@ const Navbar = () => {
                     </ul>
                     <div className="form-inline " style={{ marginLeft: 40 }}>
                         <div className="pr-1"><img src={info_icon} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
-                        <div class="px-1" type="button" data-toggle="dropdown"> <img src={american_flag} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
+                        <div class="px-1" type="button" data-toggle="dropdown"> { languageId == 0?<img src={american_flag}style={flagStyle} className="shadow-sm rounded p-2" />: <img src={taiwanFlag}style={flagStyle} className="shadow-sm rounded p-2" />} </div>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" onClick={() => {
                                 setlanguageId(0)

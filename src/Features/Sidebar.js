@@ -94,7 +94,7 @@ const Sidebar = (props) => {
                       <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item4}</a>
                     </li>
                     <li className="pt-2">
-                      <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item5}</a>
+                      <a href="#" className="text-white text-decoration-none" style={{whiteSpace: 'nowrap'}}>{SidebarLanguage[languageId].Secondary_Item5}</a>
                     </li>
                   </ul>
                   </li>
