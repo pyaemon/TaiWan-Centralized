@@ -9,6 +9,8 @@ const LanguageContextProvider = props => {
          window.localStorage.setItem('languageId',languageId)
          setlanguageId(window.localStorage.getItem('languageId',languageId))
     }, [languageId])
+    console.log("languageId..",languageId);
+    
     return (
         <LanguageContext.Provider value={{languageId,setlanguageId}}>
             {props.children}

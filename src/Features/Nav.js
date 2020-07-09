@@ -13,8 +13,8 @@ const Navbar = () => {
     const flagStyle={height: "40px", width: "40px" }
 
     return (
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg navbar-white bg-white">
 
                 <a className="navbar-brand justify-content-left" href="#">
                     {
@@ -23,10 +23,10 @@ const Navbar = () => {
                             alt="logo"/> :<div style={{color: 'grey'}}><i className="fa fa-circle pr-4" style={{width: '1px'}}></i> {`${path} ${pathname}`}</div>
                     }
                 </a>
-                <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
+                <button className="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i className="fa fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav justify-content-center mx-auto" style={{ fontSize: 17 }} >
                         <li className="nav-item active">
                             <a className="nav-link font-weight-bold" href="#" style={{ color: '#32a3de', borderBottom: '3px solid #32a3de', marginLeft: 40 }}>My Apps <span className="sr-only">(current)</span></a>
@@ -40,13 +40,13 @@ const Navbar = () => {
                     </ul>
                     <div className="form-inline " style={{ marginLeft: 40 }}>
                         <div className="pr-1"><img src={info_icon} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
-                        <div class="px-1" type="button" data-toggle="dropdown"> { languageId == 0?<img src={american_flag} style={flagStyle} className="shadow-sm rounded p-2" />: <img src={taiwanFlag} style={flagStyle} className="shadow-sm rounded p-2" />} </div>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" onClick={() => {
+                        <div className="px-1" type="button" data-toggle="dropdown"> { languageId == 0?<img src={american_flag} style={flagStyle} className="shadow-sm rounded p-2" />: <img src={taiwanFlag} style={flagStyle} NameName="shadow-sm rounded p-2" />} </div>
+                        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a className="dropdown-item" onClick={() => {
                                 setlanguageId(0)
                                 window.localStorage.setItem('languageId', 0)
                             }}>English</a>
-                            <a class="dropdown-item" onClick={() => {
+                            <a className="dropdown-item" onClick={() => {
                                 setlanguageId(1)
                                 window.localStorage.setItem('languageId', 1)
                             }}>Chinese</a>

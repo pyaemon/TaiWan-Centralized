@@ -13,7 +13,7 @@ import { SidebarLanguage } from '../util/language';
 
 const Sidebar = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const {languageId} = useContext(LanguageContext)
+  const { languageId } = useContext(LanguageContext)
   const pathname = window.location.pathname
   const openHandler = () => {
     if (!sidebarOpen) {
@@ -33,31 +33,32 @@ const Sidebar = (props) => {
     <Fragment>
       {
         pathname === '/main' ?
-        <nav  style={{minWidth: 60, maxWidth: 60,backgroundColor: '#32a3de'}}>
-          <div className="row justify-content-center mt-3 py-3" >
-            <img src={Icon} alt="icon" style={{ height: '50px', width: '50px' }} />
+          <nav style={{ minWidth: 60, maxWidth: 60, backgroundColor: '#32a3de' }}>
+            <div className="row justify-content-center mt-3 py-3" >
+              <img src={Icon} alt="icon" style={{ height: '50px', width: '50px' }} />
 
-          </div>
-        </nav>
+            </div>
+          </nav>
           :
           <Fragment>
-          { sidebar }
+            {sidebar}
           </Fragment>
       }
     </Fragment>
   )
 
+
   function subsidebar() {
     return (
-      <nav id="sidebar" className="" style={{minWidth: 300, maxWidth: 300,backgroundColor: '#32a3de', minHeight: '100vh'}} >
+      <nav id="sidebar" className="" style={{ minWidth: 300, maxWidth: 300, backgroundColor: '#32a3de', minHeight: '100vh' }} >
         <div className="p-4 pt-1">
           <div className="row p-3 ">
             <div className="col-3">
               <a href="#" className="img logo rounded-circle mb-5"> <img src={Chiller_Plant_Icon} style={{ width: 50, height: 50 }} /> </a>
             </div>
-            <div className="col-6 pt-1"><span className="font-weight-bolder text-dark" style={{ fontSize: 13}}>Acbel Chillerplant UI</span></div>
+            <div className="col-6 pt-1"><span className="font-weight-bolder text-dark" style={{ fontSize: 13 }}>Acbel Chillerplant UI</span></div>
           </div>
-          <div className="d-flex justify-content-end"><Toggle click={openHandler}>asd</Toggle></div>
+          <div className="d-flex justify-content-end"><Toggle click={openHandler}></Toggle></div>
           <ul className="list-unstyled mb-5 mt-3 p-2">
             <li className="active border-bottom pb-2 pt-2">
               <a className="text-white mt-2 text-decoration-none">Realtime</a>
@@ -67,38 +68,41 @@ const Sidebar = (props) => {
                 <a href="#" className="text-white text-decoration-none">Listview</a>
               </li>
               <li className="pt-2">
-                <a href="#mapViewMenu" data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">Mapview</a>
-                <ul className="collapse list-unstyled ml-3" id="mapViewMenu">
-                  <li className="pt-3">
-                    <a href="/chillerRoom" className="text-white text-decoration-none">Chilleroom</a>
-                  </li>
-                  <li className="pt-2">
-                    <a href="/coolingTower" className="text-white text-decoration-none">Cooling tower</a>
-                  </li>
-                  <li className="pt-2">
-                    <a href="/zonePump" className="text-white text-decoration-none">Zonepump</a>
-                  </li>
-                  <li className="pt-2">
-                  <a href="#floor"  data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">{SidebarLanguage[languageId].MV_Item}</a>
-                  <ul className="collapse list-unstyled ml-3" id="floor">
-                    <li className="pt-2">
-                      <a href="/1stFloor" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item1}</a>
+                <a href="#mapViewMenu" data-toggle="collapse" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right" >Mapview</a>
+                  <ul className="collapse list-unstyled ml-3" id="mapViewMenu">
+                    <li className="pt-3">
+                      <div className="text-white text-decoration-none" onClick={()=> props.history.push('/chillerRoom') }>Chiller Room</div>
                     </li>
                     <li className="pt-2">
-                      <a href="/1stFloor-SMT" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item2}</a>
+                    <div className="text-white text-decoration-none" onClick={()=> props.history.push('/coolingTower') }>cooling Tower</div>
                     </li>
                     <li className="pt-2">
-                      <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item3}</a>
+                    <div className="text-white text-decoration-none" onClick={()=> props.history.push('/zonePump') }>Zone Pump</div>
                     </li>
                     <li className="pt-2">
-                      <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item4}</a>
-                    </li>
-                    <li className="pt-2">
-                      <a href="#" className="text-white text-decoration-none" style={{whiteSpace: 'nowrap'}}>{SidebarLanguage[languageId].Secondary_Item5}</a>
+                      <a href="#floor" data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">{SidebarLanguage[languageId].MV_Item}</a>
+                      <ul className="collapse list-unstyled ml-3" id="floor">
+                        <li className="pt-2">
+                          <div className="text-white text-decoration-none" onClick={()=>props.history.push('/1stFloor')}>{SidebarLanguage[languageId].Secondary_Item1}</div>
+                        </li>
+                        <li className="pt-2">
+                          <div className="text-white text-decoration-none" onClick={()=>props.history.push('/1stFloor-SMT')}>{SidebarLanguage[languageId].Secondary_Item2}</div>
+                        </li>
+                        <li className="pt-2">
+                          <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item3}</a>
+                        </li>
+                        <li className="pt-2">
+                          <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item4}</a>
+                        </li>
+                        <li className="pt-2">
+                          <a href="#" className="text-white text-decoration-none" style={{ whiteSpace: 'nowrap' }}>{SidebarLanguage[languageId].Secondary_Item5}</a>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
-                  </li>
-                </ul>
+                  
+              {/* : null} */}
+
               </li>
             </ul>
             <li className="border-bottom pb-2 pt-2">
@@ -130,19 +134,19 @@ const Sidebar = (props) => {
 
         </div>
       </nav>
-      
+
     )
   }
 
   function menusidebar() {
-    const IconClick =()=>{
+    const IconClick = () => {
       props.history.push('/main')
     }
     return (
-      <nav className="" style={{minWidth: 60, maxWidth: 60,backgroundColor: '#32a3de'}}>
+      <nav className="" style={{ minWidth: 60, maxWidth: 60, backgroundColor: '#32a3de' }}>
         <div className="">
           <div className="row justify-content-center mt-3 py-3" >
-            <img src={Icon} alt="icon" style={{ height: '50px', width: '50px', cursor:'pointer' }} onClick={IconClick}/>
+            <img src={Icon} alt="icon" style={{ height: '50px', width: '50px', cursor: 'pointer' }} onClick={IconClick} />
           </div>
         </div>
         {/* <div class="d-flex justify-content-center"><Toggle click={openHandler}></Toggle></div>  */}
@@ -154,24 +158,24 @@ const Sidebar = (props) => {
             </div>
             :
             null
-          }  
-            <div className="row justify-content-center mt-3  py-3 ">
-              <img src={solar_power_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
-            </div>
-            <div className="row justify-content-center mt-3  py-3">
-              <img src={street_light_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
-            </div>
-            <div className="row justify-content-center mt-3  py-3">
-              <img src={new_iotcomui_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
-            </div>
-            <div className="row justify-content-center mt-3  py-3">
-              <img src={environmental_monitor_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
-            </div>
+          }
+          <div className="row justify-content-center mt-3  py-3 ">
+            <img src={solar_power_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
           </div>
+          <div className="row justify-content-center mt-3  py-3">
+            <img src={street_light_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
+          </div>
+          <div className="row justify-content-center mt-3  py-3">
+            <img src={new_iotcomui_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
+          </div>
+          <div className="row justify-content-center mt-3  py-3">
+            <img src={environmental_monitor_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
+          </div>
+        </div>
       </nav>
     )
   }
- 
+
 }
 
 export default withRouter(Sidebar);
