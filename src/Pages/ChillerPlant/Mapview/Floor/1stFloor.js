@@ -11,7 +11,7 @@ const FirstFloor = () => {
                     <StatusList />
                 </div>
                 <div className="col-lg-9 col-md-7 col-sm-12 col-xs-12 p-2 mx-auto" >
-                    <img src={Floor} style={{ width: '95%', height: '95%', position: 'relative', left: 0, top: 0 }} />
+                    <img src={Floor} style={{ width: '95%', height: '95%', position: 'relative', left: 0, top: 0, minHeight: "280px", minWidth: "280px"}} />
                     <img src={Icon} style={{ width: '85%', height: '90%', position: 'absolute', top: '10px', left: '27px' }} />
                 </div>
             </div>
