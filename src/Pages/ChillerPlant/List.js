@@ -6,13 +6,18 @@ const StatusList = (props) => {
     return (
         <div className="w-100 ">
             <ul className="list-group shadow bg-white p-2">
-                <div className="p-4 font-weight-bold" style={{fontSize: Font.heading3}}>Status list</div>
+                <div className="p-4 font-weight-bold" style={{ fontSize: Font.heading3 }}>Status list</div>
                 <div className="mb-5 p-2 mx-2 shadow-sm ">
-                    <input type="text" placeholder="送 風 機" style={{border: 'none'}} />
+                    <input type="text" placeholder="送 風 機" style={{ border: 'none' }} />
                 </div>
-            
+                <div className="mx-4 mb-4 d-flex flex-row justify-content-between align-items-center text-muted" style={{fontSize: Font.small,whiteSpace:'nowrap'}}>
+                    <div className="col-lg-4" >裝置編號</div>
+                    <div className="col-lg-4" >設定溫度(°C)</div>
+                    <div className="col-lg-2" >風溫(°C)</div>
+                    <div className="col-lg-2" >狀態</div>
+                </div>
                 {list.map((v, k) =>
-                    <li className="list-group-item mx-1 d-flex flex-row justify-content-between align-items-center font-weight-bold" style={{ fontSize: Font.small, borderTop: 'none', borderLeft: 'none', borderRight: 'none'}} key={k}>
+                    <li className="list-group-item mx-1 d-flex flex-row justify-content-between align-items-center font-weight-bold" style={{ fontSize: Font.small, borderTop: 'none', borderLeft: 'none', borderRight: 'none' }} key={k}>
                         <div className="col-lg-4">{v.name}</div>
                         <div className="col-lg-4">{v.n1}</div>
                         <div className="col-lg-2">{v.n2}</div>
