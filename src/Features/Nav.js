@@ -1,68 +1,3 @@
-// import React, { useContext } from 'react';
-// import Evercomm from '../Config/Images/New_Evercomm_Logo_gradient .png'
-// import acbel_user_icon_exemple from '../Config/Images/acbel user icon exemple.png';
-// import info_icon from '../Config/Images/info_icon.png';
-// import american_flag from '../Config/Images/language_icon.png';
-// import { LanguageContext } from '../Languages/Context/LanguageContext';
-// import taiwanFlag from '../Config/Images/TaiwanFlag.jpg'
-
-// const Navbar = () => {
-//     const pathname = window.location.pathname;
-//     const path = "Mapview"
-//     const { languageId, setlanguageId } = useContext(LanguageContext)
-//     const flagStyle = { height: "40px", width: "40px" }
-
-//     return (
-//         <div className="container-fluid">
-//             <nav className="navbar navbar-expand-lg navbar-white bg-white">
-
-//                 <a className="navbar-brand justify-content-left" href="#">
-//                     {
-//                         pathname == "/main" ? <img src={Evercomm}
-//                             style={{ height: "30px", cursor: "pointer" }}
-//                             alt="logo" /> : <div style={{ color: 'grey' }}><i className="fa fa-circle pr-4" style={{ width: '1px' }}></i> {`${path} ${pathname}`}</div>
-//                     }
-//                 </a>
-//                 <button className="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//                     <i className="fa fa-bars"></i>
-//                 </button>
-//                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-//                     <ul className="navbar-nav justify-content-center mx-auto" style={{ fontSize: 17 }} >
-//                         <li className="nav-item active">
-//                             <a className="nav-link font-weight-bold" href="#" style={{ color: '#32a3de', borderBottom: '3px solid #32a3de', marginLeft: 40 }}>My Apps <span className="sr-only">(current)</span></a>
-//                         </li>
-//                         <li className="nav-item">
-//                             <a className="nav-link text-muted font-weight-bold " href="#" style={{ marginLeft: 40 }}>Management</a>
-//                         </li>
-//                         <li className="nav-item">
-//                             <a className="nav-link text-muted font-weight-bold" href="#" style={{ marginLeft: 40 }}>Alarms<span className="ml-2 badge badge-danger">3</span></a>
-//                         </li>
-//                     </ul>
-//                     <div className="form-inline " style={{ marginLeft: 40 }}>
-//                         <div className="pr-1"><img src={info_icon} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
-//                         <div className="px-1" type="button" data-toggle="dropdown"> {languageId == 0 ? <img src={american_flag} style={flagStyle} className="shadow-sm rounded p-2" /> : <img src={taiwanFlag} style={flagStyle} NameName="shadow-sm rounded p-2" />} </div>
-//                         <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-//                             <a className="dropdown-item" onClick={() => {
-//                                 setlanguageId(0)
-//                                 window.localStorage.setItem('languageId', 0)
-//                             }}>English</a>
-//                             <a className="dropdown-item" onClick={() => {
-//                                 setlanguageId(1)
-//                                 window.localStorage.setItem('languageId', 1)
-//                             }}>Chinese</a>
-//                         </div>
-//                         <div className="px-1"><img src={acbel_user_icon_exemple} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded" /></div>
-//                     </div>
-//                 </div>
-//             </nav>
-//         </div>
-//     );
-
-
-// }
-
-// export default Navbar;
-
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { Row } from 'simple-flexbox';
@@ -74,6 +9,7 @@ import info_icon from '../Config/Images/info_icon.png';
 import american_flag from '../Config/Images/language_icon.png';
 import taiwanFlag from '../Config/Images/TaiwanFlag.jpg'
 import { LanguageContext } from '../Languages/Context/LanguageContext';
+import Font from '../Config/Font';
 
 const styles = StyleSheet.create({
     avatar: {
@@ -135,7 +71,6 @@ const MainNav=()=>{
     const pathname = window.location.pathname;
     const path = "Mapview"
     const { languageId, setlanguageId } = useContext(LanguageContext)
-    const flagStyle = { height: "40px", width: "40px" }
     // const { icon, title, ...otherProps } = this.props;
 
     return (
@@ -145,14 +80,14 @@ const MainNav=()=>{
                 {
                     pathname == "/main" ? <img src={Evercomm}
                         style={{ height: "30px", cursor: "pointer" }}
-                        alt="logo" /> : <div style={{ color: 'grey' }}><i className="fa fa-circle pr-4" style={{ width: '1px' }}></i> {`${path} ${pathname}`}</div>
+                        alt="logo" /> : <div style={{ color: 'grey', fontSize: Font.labels}}><i className="fa fa-circle pr-4" style={{ width: '1px' }}></i> {`${path} ${pathname}`}</div>
                 }
             </Navbar.Brand>
-            <button className="btn d-inline-block d-lg-none mt-1" type="button" data-toggle="collapse" data-target="#responsive-navbar-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="btn d-inline-block d-lg-none mt-1 mr-2" type="button" data-toggle="collapse" data-target="#responsive-navbar-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-cog" aria-hidden="true" style={{ fontSize: 30 }}></i>
             </button>
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mx-auto">
+                <Nav className="mx-auto" style={{fontSize: Font.heading3}}>
                     <Nav.Link href="#MyApps" className="" style={{ color: '#32a3de', borderBottom: '3px solid #32a3de', marginLeft: 40 }}>My Apps</Nav.Link>
                     <Nav.Link href="#Management" className="" style={{ marginLeft: 40 }}>Management</Nav.Link>
                     <Nav.Link href="#Alarms" className="" style={{ marginLeft: 40 }}>Alarms <span className="ml-2 badge badge-danger">3</span></Nav.Link>
@@ -161,7 +96,7 @@ const MainNav=()=>{
                 <Nav>
                     <div className="form-inline " style={{ marginLeft: 40 }}>
                         <div className="pr-1"><img src={info_icon} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
-                        <div className="px-1" type="button" data-toggle="dropdown"> {languageId == 0 ? <img src={american_flag} style={flagStyle} className="shadow-sm rounded p-2" /> : <img src={taiwanFlag} style={flagStyle} NameName="shadow-sm rounded p-2" />} </div>
+                        <div className="px-1" type="button" data-toggle="dropdown"> {languageId == 0 ? <img src={american_flag} style={{ height: "41px", width: "41px" }} className="shadow-sm rounded p-2" /> : <img src={taiwanFlag} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" />} </div>
                         <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                             <a className="dropdown-item" onClick={() => {
                                 setlanguageId(0)

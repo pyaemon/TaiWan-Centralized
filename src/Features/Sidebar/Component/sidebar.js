@@ -125,6 +125,8 @@ class SidebarComponent extends React.Component {
     const { expanded } = this.state;
     const {languageId} = this.props
     const isMobile = this.isMobile();
+    const pathName = window.location.pathname
+    console.log('path', pathName)
 
     return (
       <Fragment>
@@ -134,7 +136,7 @@ class SidebarComponent extends React.Component {
               <Row className={css(styles.mainContainer)} breakpoints={{ 768: css(styles.mainContainerMobile) }}>
                 {(isMobile && !expanded) && this.renderBurger()}
                 <Column className={css(styles.menucontainer)} breakpoints={{ 768: css(styles.menucontainerMobile, expanded ? styles.show : styles.hide) }}>
-                  <div className="row justify-content-center mt-3 py-3" >
+                  <div className="row justify-content-center mt-5" >
                     <img src={Icon} alt="icon" style={{ height: '50px', width: '50px', cursor: 'pointer' }} onClick={() => this.IconClick()} />
                   </div>
                   <Column className={css(styles.menuItemList)}>
@@ -147,16 +149,16 @@ class SidebarComponent extends React.Component {
                         :
                         null
                       }
-                      <div className="row justify-content-center mt-3  py-3 ">
+                      <div className="row justify-content-center mt-5 ">
                         <img src={solar_power_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
                       </div>
-                      <div className="row justify-content-center mt-3  py-3">
+                      <div className="row justify-content-center mt-5">
                         <img src={street_light_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
                       </div>
-                      <div className="row justify-content-center mt-3  py-3">
+                      <div className="row justify-content-center mt-5">
                         <img src={new_iotcomui_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
                       </div>
-                      <div className="row justify-content-center mt-3  py-3">
+                      <div className="row justify-content-center mt-5">
                         <img src={environmental_monitor_ui_icon} alt="icon" style={{ height: '45px', width: '45px' }} />
                       </div>
                     </div>
@@ -181,32 +183,32 @@ class SidebarComponent extends React.Component {
                   <Column className={css(styles.menuItemList)}>
                     <ul className="list-unstyled mb-5 mt-3 p-2">
                       <li className="active border-bottom pb-2 pt-2">
-                        <a className="text-white mt-2 text-decoration-none">Realtime</a>
+                        <a className="text-white mt-2 text-decoration-none">{SidebarLanguage[languageId].RealTime}</a>
                       </li>
                       <ul className="list-unstyled ml-3">
                         <li className="pt-3">
-                          <a href="#" className="text-white text-decoration-none">Listview</a>
+                          <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].RT_Item1}</a>
                         </li>
                         <li className="pt-2">
-                          <a href="#mapViewMenu" data-toggle="collapse" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right" >Mapview</a>
+                          <a href="#mapViewMenu" data-toggle="collapse" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right" >{SidebarLanguage[languageId].RT_Item2}</a>
                           <ul className="collapse list-unstyled ml-3" id="mapViewMenu">
                             <li className="pt-3">
-                              <div className="text-white text-decoration-none" onClick={() => this.props.history.push('/chillerRoom')}>Chiller Room</div>
+                              <div className="text-decoration-none" onClick={() => this.props.history.push('/chillerRoom')} style={{color: pathName === '/chillerRoom'? '#050505' : "#FFFFFF"}}>{SidebarLanguage[languageId].MV_Item1}</div>
                             </li>
                             <li className="pt-2">
-                              <div className="text-white text-decoration-none" onClick={() => this.props.history.push('/coolingTower')}>Cooling Tower</div>
+                              <div className="text-decoration-none" onClick={() => this.props.history.push('/coolingTower')} style={{color: pathName === '/coolingTower'? '#050505' : "#FFFFFF"}}>{SidebarLanguage[languageId].MV_Item2}</div>
                             </li>
                             <li className="pt-2">
-                              <div className="text-white text-decoration-none" onClick={() => this.props.history.push('/zonePump')}>Zone Pump</div>
+                              <div className="text-decoration-none" onClick={() => this.props.history.push('/zonePump')} style={{color: pathName === '/zonePump'? '#050505' : "#FFFFFF"}}>{SidebarLanguage[languageId].MV_Item3}</div>
                             </li>
                             <li className="pt-2">
-                              <a href="#floor" data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">{SidebarLanguage[languageId].MV_Item}</a>
+                            <a href="#floor" data-toggle="collapse" aria-expanded="false" className="text-decoration-none dropdown-toggle text-white text-left  dropdown-menu-right">{SidebarLanguage[languageId].MV_Item4}</a>
                               <ul className="collapse list-unstyled ml-3" id="floor">
                                 <li className="pt-2">
-                                  <div className="text-white text-decoration-none" onClick={() => this.props.history.push('/1stFloor')}>{SidebarLanguage[languageId].Secondary_Item1}</div>
+                                  <div className="text-decoration-none" onClick={() => this.props.history.push('/1stFloor')} style={{color: pathName === '/1stFloor'? '#050505' : "#FFFFFF"}}>{SidebarLanguage[languageId].Secondary_Item1}</div>
                                 </li>
                                 <li className="pt-2">
-                                  <div className="text-white text-decoration-none" onClick={() => this.props.history.push('/1stFloor-SMT')}>{SidebarLanguage[languageId].Secondary_Item2}</div>
+                                  <div className="text-decoration-none" onClick={() => this.props.history.push('/1stFloor-SMT')} style={{color: pathName === '/1stFloor-SMT'? '#050505' : "#FFFFFF"}}>{SidebarLanguage[languageId].Secondary_Item2}</div>
                                 </li>
                                 <li className="pt-2">
                                   <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Secondary_Item3}</a>
@@ -223,28 +225,28 @@ class SidebarComponent extends React.Component {
                         </li>
                       </ul>
                       <li className="border-bottom pb-2 pt-2">
-                        <a href="#" className="text-white text-decoration-none">Analysis</a>
+                        <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Analysis}</a>
                       </li>
                       <ul className="list-unstyled ml-3">
                         <li className="pt-2">
-                          <a href="#" className="text-white text-decoration-none">Data trend</a>
+                          <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].A_Item1}</a>
                         </li>
                         <li className="pt-2">
-                          <a href="#" className="text-white text-decoration-none">Chiller performance</a>
+                          <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].A_Itmem2}</a>
                         </li>
                       </ul>
                       <li className="border-bottom pb-2 pt-2">
-                        <a href="#" className="text-white text-decoration-none">Report</a>
+                        <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].Report}</a>
                       </li>
                       <ul className="list-unstyled ml-3">
                         <li className="pt-2">
-                          <a href="#" className="text-white text-decoration-none">Data quality</a>
+                          <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].RP_Item1}</a>
                         </li>
                         <li className="pt-2">
-                          <a href="#" className="text-white text-decoration-none">Daily activity</a>
+                          <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].RP_Item2}</a>
                         </li>
                         <li className="pt-2">
-                          <a href="#" className="text-white text-decoration-none">Weekly performance</a>
+                          <a href="#" className="text-white text-decoration-none">{SidebarLanguage[languageId].RP_Item3}</a>
                         </li>
                       </ul>
                     </ul>
