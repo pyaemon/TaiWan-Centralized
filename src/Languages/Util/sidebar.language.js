@@ -14,13 +14,13 @@ export const SidebarLanguage = [
         Secondary_Item5 : "3F Research Three Pavilions",
 
         Analysis: "Analysis",
-        A_Item1 : "Data trend",
-        A_Itmem2 : "Chiller performance",
+        A_Item1 : "Data Trend",
+        A_Itmem2 : "Chiller Performance",
 
         Report : "Report",
-        RP_Item1 : "Data quality",
-        RP_Item2 : "Daily activity",
-        RP_Item3 : "Weekly performance"
+        RP_Item1 : "Data Quality",
+        RP_Item2 : "Daily Activity",
+        RP_Item3 : "Weekly Performance"
     },
     {
         RealTime : "即時",

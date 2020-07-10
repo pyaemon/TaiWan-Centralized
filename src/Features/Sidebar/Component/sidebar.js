@@ -136,7 +136,7 @@ class SidebarComponent extends React.Component {
               <Row className={css(styles.mainContainer)} breakpoints={{ 768: css(styles.mainContainerMobile) }}>
                 {(isMobile && !expanded) && this.renderBurger()}
                 <Column className={css(styles.menucontainer)} breakpoints={{ 768: css(styles.menucontainerMobile, expanded ? styles.show : styles.hide) }}>
-                  <div className="row justify-content-center mt-5" >
+                  <div className="row justify-content-center " >
                     <img src={Icon} alt="icon" style={{ height: '50px', width: '50px', cursor: 'pointer' }} onClick={() => this.IconClick()} />
                   </div>
                   <Column className={css(styles.menuItemList)}>
@@ -169,7 +169,7 @@ class SidebarComponent extends React.Component {
               </Row>
             </div>
             :
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative', cursor: 'pointer' }}>
               <Row className={css(styles.mainContainer)} breakpoints={{ 768: css(styles.mainContainerMobile) }}>
                 {(isMobile && !expanded) && this.renderBurger()}
                 <Column className={css(styles.container)} breakpoints={{ 768: css(styles.containerMobile, expanded ? styles.show : styles.hide) }}>

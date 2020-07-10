@@ -1,7 +1,7 @@
 import React from 'react'
 import Floor from '../../../../Config/Images/NewBMap02.png'
 import Icon from '../../../../Config/Images/NewBMap_icons.png'
-import StatusList from '../../../ChillerPlant/list'
+import StatusList from '../../list'
 
 const FirstFloor = () => {
     return (

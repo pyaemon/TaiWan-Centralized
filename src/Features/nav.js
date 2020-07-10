@@ -97,7 +97,7 @@ const MainNav=()=>{
                     <div className="form-inline " style={{ marginLeft: 40 }}>
                         <div className="pr-1"><img src={info_icon} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" /></div>
                         <div className="px-1" type="button" data-toggle="dropdown"> {languageId == 0 ? <img src={american_flag} style={{ height: "41px", width: "41px" }} className="shadow-sm rounded p-2" /> : <img src={taiwanFlag} style={{ height: "40px", width: "40px" }} className="shadow-sm rounded p-2" />} </div>
-                        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style={{position:'absolute', cursor: "pointer"}}>
                             <a className="dropdown-item" onClick={() => {
                                 setlanguageId(0)
                                 window.localStorage.setItem('languageId', 0)

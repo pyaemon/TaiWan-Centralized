@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 });
 
 class PageApp extends React.Component {
-//"Hello"
+
     state = { selectedItem: 'Tickets' };
 
     componentDidMount() {
