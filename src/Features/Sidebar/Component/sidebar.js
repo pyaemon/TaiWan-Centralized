@@ -1,15 +1,14 @@
 import React, { Fragment, useState, Component, useContext } from 'react';
-import '.././App.css';
-import Icon from '../Config/images/i4.PNG';
-import solar_power_ui_icon from '../Config/images/solar power ui_icon.png';
-import street_light_ui_icon from '../Config/images/street light ui_icon.png';
-import new_iotcomui_ui_icon from '../Config/images/new iotcomui ui_icon.png';
-import environmental_monitor_ui_icon from '../Config/images/environmental monitor ui_icon.png';
-import Chiller_Plant_Icon from '../Config/images/chiller plant ui_icon.png';
-import Toggle from '../tools/toggle.js';
+import Icon from '../../../Config/Images/i4.PNG';
+import solar_power_ui_icon from '../../../Config/Images/solar power ui_icon.png';
+import street_light_ui_icon from '../../../Config/Images/street light ui_icon.png';
+import new_iotcomui_ui_icon from '../../../Config/Images/new iotcomui ui_icon.png';
+import environmental_monitor_ui_icon from '../../../Config/Images/environmental monitor ui_icon.png';
+import Chiller_Plant_Icon from '../../../Config/Images/chiller plant ui_icon.png';
+import Toggle from '../../../Tools/toggle';
 import { withRouter } from 'react-router-dom';
-import { LanguageContext } from '../context/LanguageContext';
-import { SidebarLanguage } from '../util/language';
+import { LanguageContext } from '../../../Languages/Context/LanguageContext';
+import { SidebarLanguage } from '../../../Languages/Util/sidebar.language';
 
 const Sidebar = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);

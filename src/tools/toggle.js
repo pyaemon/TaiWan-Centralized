@@ -1,5 +1,5 @@
 import React from 'react';
-import Chiller_Plant_Icon from '../Config/images/chiller plant ui_icon.png';
+import Chiller_Plant_Icon from '../Config/Images/chiller plant ui_icon.png';
 
 const Toggle = (props) => {
     return (

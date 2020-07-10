@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import Evercomm from '../Config/images/New_Evercomm_Logo_gradient .png'
-import acbel_user_icon_exemple from '../Config/images/acbel user icon exemple.png';
-import info_icon from '../Config/images/info_icon.png';
-import american_flag from '../Config/images/language_icon.png';
-import { LanguageContext } from '../context/LanguageContext';
-import taiwanFlag from '../Config/images/TaiwanFlag.jpg'
+import Evercomm from '../Config/Images/New_Evercomm_Logo_gradient .png'
+import acbel_user_icon_exemple from '../Config/Images/acbel user icon exemple.png';
+import info_icon from '../Config/Images/info_icon.png';
+import american_flag from '../Config/Images/language_icon.png';
+import { LanguageContext } from '../Languages/Context/LanguageContext';
+import taiwanFlag from '../Config/Images/TaiwanFlag.jpg'
 
 const Navbar = () => {
     const pathname = window.location.pathname;

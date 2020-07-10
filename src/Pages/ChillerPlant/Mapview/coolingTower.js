@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import CoolingTowerIMG from './../../../Config/images/cooling-tower.png'
+import CoolingTowerIMG from './../../../Config/Images/cooling-tower.png'
 
 const CoolingTower = () => {
     return (

@@ -1,9 +1,9 @@
 import React from 'react';
-import Icon1 from '../../../Config/images/chiller plant ui_icon.png'
-import Icon2 from '../../../Config/images/environmental monitor ui_icon.png'
-import Icon3 from '../../../Config/images/street light ui_icon.png'
-import Icon4 from '../../../Config/images/solar power ui_icon.png'
-import Icon5 from '../../../Config/images/new iotcomui ui_icon.png'
+import Icon1 from '../../../Config/Images/chiller plant ui_icon.png'
+import Icon2 from '../../../Config/Images/environmental monitor ui_icon.png'
+import Icon3 from '../../../Config/Images/street light ui_icon.png'
+import Icon4 from '../../../Config/Images/solar power ui_icon.png'
+import Icon5 from '../../../Config/Images/new iotcomui ui_icon.png'
 import MainMenuCard from '../component/main'
 
 const MainMenuContainer = (props) => {

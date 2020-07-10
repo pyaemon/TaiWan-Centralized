@@ -1,5 +1,5 @@
 import React from 'react';
-import chiller from '../../../Config/images/chiller-plant.png';
+import chiller from '../../../Config/Images/chiller-plant.png';
 
 const ChillerRoom=()=>{
     return(

@@ -1,7 +1,7 @@
 import React from 'react'
-import FloorSMT from '../../../../Config/images/NewSMTMap01.png'
-import Icon from '../../../../Config/images/NewSMTMap_icons.png'
-import StatusList from '../../List'
+import FloorSMT from '../../../../Config/Images/NewSMTMap01.png'
+import Icon from '../../../../Config/Images/NewSMTMap_icons.png'
+import StatusList from '../../../ChillerPlant/list'
 
 const FirstFloorSMT = () => {
     return (

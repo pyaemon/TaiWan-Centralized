@@ -1,6 +1,6 @@
 import React from 'react';
 import './../../../App.css';
-import ZonepumpImage from '../../../Config/images/zonepump-room.png';
+import ZonepumpImage from '../../../Config/Images/zonepump-room.png';
 
 function Zonepump(){
     return(

@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-
-import Evercomm from '../../Config/images/New_Evercomm_Logo_gradient .png'
-
-import GradientBtn from '../../Features/KMGradientButton'
-import InputBox from '../../Features/InputBox'
+import Evercomm from '../../Config/Images/New_Evercomm_Logo_gradient .png'
+import GradientBtn from '../../Tools/button'
+import InputBox from '../../Tools/input'
 import Font from '../../Config/Font'
 
 const Login = (props) => {
