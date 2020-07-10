@@ -5,7 +5,8 @@ import Navbar from './Features/nav'
 import MainMenuContainer from './Pages/MainPage/container/maincontainer';
 import Login from './Pages/Login/index'
 import ChillerPlant from './Pages/ChillerPlant/index'
-import Sidebar from './Features/Sidebar/Component/sidebar';
+import Sidebar from './Features/Sidebar/Container/sidebarcontainer';
+import MainNav from './Features/nav';
 //import Header from './Features/Nav';
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const PageApp = (props) => {
       <Sidebar />
       <Switch>
         <div className="m-lg-4 m-sm-0 " style={{ width: '100%', padding: 0, minHeight: '100vh' }}>
-          <Navbar/>
+          <MainNav/>
           <Route path="/main" component={MainMenuContainer} className="mx-2 mt-4" />
           <Route path="/chiller-plant" component={ChillerPlant} className="mx-2 mt-4" />
           <Route path="/chillerRoom" component={ChillerPlant} className="mx-2 mt-4" />
