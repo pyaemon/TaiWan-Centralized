@@ -7,7 +7,7 @@ import './App.css';
 import MainMenuContainer from './Pages/MainPage/container/maincontainer';
 import ChillerPlant from './Pages/ChillerPlant/index'
 import Login from './Pages/Login/index'
-import MainNav from './Features/Nav';
+import MainNav from './Features/nav';
 
 
 const styles = StyleSheet.create({
