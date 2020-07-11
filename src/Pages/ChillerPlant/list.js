@@ -4,7 +4,7 @@ import { LanguageContext } from '../../Languages/Context/LanguageContext';
 import { StatusListLanguage } from '../../Languages/Util/statusListLanguage';
 
 
-const StatusList = (props) => {
+const StatusList = () => {
     const { languageId } = useContext(LanguageContext)
     return (
         <div className="w-100 ">
@@ -28,7 +28,6 @@ const StatusList = (props) => {
                             style={{ color: `${v.switch}` === 'ON' ? 'green' : 'grey' }} >{v.switch}</div>
                     </li>
                 )}
-
             </ul>
         </div>
     )

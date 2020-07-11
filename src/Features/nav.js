@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
 });
 
 const MainNav=()=>{
-    const pathname = window.location.pathname;
+    const pathName = window.location.pathname;
     const path = "Mapview"
     const { languageId, setlanguageId } = useContext(LanguageContext)
     // const { icon, title, ...otherProps } = this.props;
@@ -78,9 +78,9 @@ const MainNav=()=>{
             <Navbar.Brand href="#home" vertical="" className="mb-2">
 
                 {
-                    pathname == "/main" ? <img src={Evercomm}
+                    pathName == "/main" ? <img src={Evercomm}
                         style={{ height: "30px", cursor: "pointer" }}
-                        alt="logo" /> : <div style={{ color: 'grey', fontSize: Font.labels}}><i className="fa fa-circle pr-4" style={{ width: '1px' }}></i> {`${path} ${pathname}`}</div>
+                        alt="logo" /> : <div style={{ color: 'grey', fontSize: Font.labels}}><i className="fa fa-circle pr-4" style={{ width: '1px' }}></i> {`${path} ${pathName}`}</div>
                 }
             </Navbar.Brand>
             <button className="btn d-inline-block d-lg-none mt-1 mr-2" type="button" data-toggle="collapse" data-target="#responsive-navbar-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

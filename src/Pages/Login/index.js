@@ -6,7 +6,7 @@ import Font from '../../Config/Font'
 
 const Login = (props) => {
     const [data, setData] = useState()
-    const _handleLogin = e => {
+    const handleLogin = e => {
         if(data.email === "admin@gmail.com" || data.password === "admin"){
             props.history.push("/main")
         }
@@ -22,7 +22,7 @@ const Login = (props) => {
                     <img src={Evercomm} height={25} />
                 </div>
 
-                <form onSubmit={_handleLogin} >
+                <form onSubmit={handleLogin} >
                     <div className="form-group my-0" >
                         <InputBox
                             type="email"

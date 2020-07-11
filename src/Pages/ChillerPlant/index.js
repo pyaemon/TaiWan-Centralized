@@ -8,7 +8,6 @@ import FirstFloorSMT from './Mapview/Floor/1stFloorSMT';
 
 
 const ChillerPlant = () => {
-    // const path=window.location.pathname
     return (
         <div className='py-5'>
             <Switch>
@@ -20,9 +19,6 @@ const ChillerPlant = () => {
                     <Route path="/1stFloor-SMT" render={() => < FirstFloorSMT />} />
                 </div>
             </Switch>
-
-
-
         </div>
     )
 }

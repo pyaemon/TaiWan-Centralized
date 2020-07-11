@@ -6,13 +6,13 @@ import { LanguageContext } from '../../../Languages/Context/LanguageContext';
 
 const Sidebar = (props) => {
 
-    const pathname = window.location.pathname
+    const pathName = window.location.pathname
     const { languageId } = useContext(LanguageContext)
  
     return (
         <Fragment>
             {
-                pathname === '/main' ?
+                pathName === '/main' ?
                     <nav id="sidebar-wrapper" style={{ minWidth: 90, maxWidth: 90, backgroundColor: '#32a3de' }}>
                         <div className="row justify-content-center mt-3 py-3" >
                             <img src={Icon} alt="icon" style={{ height: '50px', width: '50px' }} />

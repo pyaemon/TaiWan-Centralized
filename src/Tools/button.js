@@ -2,9 +2,7 @@ import React from 'react'
 import '../App.css';
 
 const KMGradientButton = props => {
-    const { text, onClick, type, round, style, small,  onSubmit } = props
-    const defaultStyle = { outline: 'none', boxShadow: 'none', color: '#ffffff', border: 'none', borderRadius: round === undefined ? 5 : 16, minWidth: 160 }
-    const userStyle = style === undefined ? {} : style
+    const { text, onClick, type} = props
     return (
         <button
             onClick={onClick}

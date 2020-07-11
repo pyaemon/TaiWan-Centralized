@@ -7,7 +7,7 @@ import Icon5 from '../../../Config/Images/new iotcomui ui_icon.png'
 import MainMenuCard from '../component/main'
 
 const MainMenuContainer = (props) => {
-    const _handleIcon = e => {
+    const handleIcon = e => {
         props.history.push("/chillerRoom")
     }
     return (
@@ -15,7 +15,7 @@ const MainMenuContainer = (props) => {
             <div className="d-flex flex-row flex-wrap justify-content-center">
                 <MainMenuCard title={"Acbel chiller plant UI"}
                     icon={Icon1} loading={"Loading%"} Consumption={"Consumption"} Error={"Error"}
-                    loadingValue={"50%"} ConsumptionValue={"150.3Kw"} ErrorValue={"7"} click={_handleIcon} />
+                    loadingValue={"50%"} ConsumptionValue={"150.3Kw"} ErrorValue={"7"} click={handleIcon} />
 
                 <MainMenuCard title={"Acbel environmental monitor UI"}
                     icon={Icon2} loading={"Loading%"} Consumption={"Consumption"} Error={"Error"}
